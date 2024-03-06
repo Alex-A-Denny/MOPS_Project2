@@ -1,0 +1,81 @@
+Script started on Tue Mar  7 17:11:58 2017
+Looking for ~bks/.bashrc.f2y file to execute.
+Found.
+
+csci243@voyager:~/Faculty/Projects/Offspring/Source[1]$ offspring file2.txt
+error: 'Fred' is not in the tree and 'Bill' is not the root.
+offspring> help
+User Commands for offspring:
+add parent-name, child-name # find parent and add child.
+find name     # search and print name and children if name is found.
+print [name]  # breadth first traversal of offspring from name.
+size [name]   # count members in the [sub]tree.
+height [name] # return the height of [sub]tree.
+init          # delete current tree and restart with an empty tree.
+help          # print this information.
+quit          # delete current tree and end program.
+offspring> add
+Usage: 'add parent name , child name'
+offspring> find
+error: '' not found
+offspring> find Uncle Joe
+Uncle Joe had Cousin Vinnie and Jane.
+offspring> print Uncle Joe
+Uncle Joe had Cousin Vinnie and Jane.
+Cousin Vinnie had Tina.
+Jane had no offspring.
+Tina had no offspring.
+offspring> size Uncle Joe
+size: 4
+offspring> height Uncle Joe
+height: 2
+offspring> height
+height: 5
+offspring> size
+size: 14
+offspring> print
+great great grandma Agnes had great grandpa Peter and great great Aunt Millie.
+great grandpa Peter had Grandma Bernice and great Uncle Bob.
+great great Aunt Millie had no offspring.
+Grandma Bernice had Mom, Uncle Joe and Aunt Frannie.
+great Uncle Bob had Louisa.
+Mom had ME and Tobey.
+Uncle Joe had Cousin Vinnie and Jane.
+Aunt Frannie had no offspring.
+Louisa had no offspring.
+ME had no offspring.
+Tobey had no offspring.
+Cousin Vinnie had Tina.
+Jane had no offspring.
+Tina had no offspring.
+offspring> add Uncle Joe, Auntie Mame
+offspring> size Uncle Joe
+size: 5
+offspring> print
+great great grandma Agnes had great grandpa Peter and great great Aunt Millie.
+great grandpa Peter had Grandma Bernice and great Uncle Bob.
+great great Aunt Millie had no offspring.
+Grandma Bernice had Mom, Uncle Joe and Aunt Frannie.
+great Uncle Bob had Louisa.
+Mom had ME and Tobey.
+Uncle Joe had Cousin Vinnie, Jane and Auntie Mame.
+Aunt Frannie had no offspring.
+Louisa had no offspring.
+ME had no offspring.
+Tobey had no offspring.
+Cousin Vinnie had Tina.
+Jane had no offspring.
+Auntie Mame had no offspring.
+Tina had no offspring.
+offspring> find Nobody
+error: 'Nobody' not found
+offspring> size Nobody
+size: 0
+offspring> height Nobody
+height: -1
+offspring> quit
+
+csci243@voyager:~/Faculty/Projects/Offspring/Source[2]$ exit
+exit
+
+Script done on Tue Mar  7 17:13:52 2017
